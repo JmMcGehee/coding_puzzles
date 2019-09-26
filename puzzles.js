@@ -11,12 +11,18 @@
 // Go through each word
 //   Evaluate the first letter
 
-const str = "word";
+let str = "word";
 
 let capitalize = (word) => {
-  let firstLetterToUnicode = word.charCodeAt(0);
-  let toCaps = String.fromCharCode(word.charCodeAt(0)-32);
-  console.log(toCaps);
+  let capitalizedWord = "";
+  for (let i = 0; i < word.length; i++) {
+    if (97 <= word.charCodeAt(i) <= 122) {
+      capitalizedWord.concat(word.charAt(i))
+    } else {
+      capitalizedWord.concat(fromCharCode(word.charCodeAt(i)-32))
+    }
+    console.log(capitalizedWord);
+  }
 }
 
-capitalize("word");
+capitalize(str);
