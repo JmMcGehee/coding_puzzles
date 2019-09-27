@@ -26,3 +26,5 @@ let capitalize = (word) => {
 }
 
 capitalize(str);
+
+new code!
